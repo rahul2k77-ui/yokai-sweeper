@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yokai Forest Escape | Logic Puzzle</title>
+  <meta name="author" content="Rahul">
+  <meta name="description" content="A grid-based logic and probability puzzle game.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>⛩️ YOKAI FOREST ESCAPE</h1>
+  <p class="sub">A Logic & Probability Grid Puzzle</p>
+
+  <div class="clue-box" id="clueBox">
+    You wander into a cursed bamboo forest. Find the Torii gate to escape.<br>
+    <span style="color:#8ba4b8">Click adjacent paths to move. Right-click to mark danger.</span>
+  </div>
+
+  <div id="grid"></div>
+
+  <div class="controls">
+    <button class="btn-restart" id="restartBtn">↺ New Journey</button>
+  </div>
+
+  <div class="legend">
+    🥷 You &nbsp;|&nbsp; ⛩️ Exit &nbsp;|&nbsp; 👹 Yokai (kills) &nbsp;|&nbsp; 🏮 Curse (kills)<br>
+    👹 nearby → <i style="color:#a8b2d1">"rustling leaves"</i> &nbsp;|&nbsp;
+    🏮 nearby → <i style="color:#a8b2d1">"glowing mist"</i><br>
+    Right-click a hidden cell to flag ⚑ as dangerous
+  </div>
+
+  <div class="overlay" id="winOverlay">
+    <div class="overlay-msg">
+      ⛩️ <span style="color:#4ade80">You Escaped!</span><br>
+      <span style="font-size:0.9rem; color:#a8b2d1">Your logic guided you through the forest.</span>
+    </div>
+    <button class="btn-restart close-overlay">Play Again</button>
+  </div>
+
+  <div class="overlay" id="loseOverlay">
+    <div class="overlay-msg" id="loseMsg">💀</div>
+    <button class="btn-restart close-overlay">Try Again</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
